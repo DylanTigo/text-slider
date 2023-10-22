@@ -1,0 +1,43 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+section {
+  font-size: 30px;
+  margin-top: 150px;
+}
+section .slider {
+  overflow: hidden;
+  display: flex;
+}
+section .slider .slider-1 {
+  flex-shrink: 0;
+  background: #111;
+  min-width: 100%;
+  display: flex;
+  animation: slide 30s infinite;
+}
+section .slider a {
+  flex-shrink: 0;
+  padding: 25px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #f1f1f1;
+}
+section .slider a i {
+  margin-right: 10px;
+  width: 35px;
+}
+
+@keyframes slide {
+  to {
+    transform: translateX(-100%);
+  }
+}/*# sourceMappingURL=style.css.map */
