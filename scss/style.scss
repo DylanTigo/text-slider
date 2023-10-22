@@ -8,41 +8,61 @@ body{
     background: #333;
 }
 $font-noir: #111;
-$primary-white-color: #f1f1f1;
+$primary-white-color: #e4e4e4;
 
 section{
-    font-size: 30px;
+    font-size: 25px;
     margin-top: 150px;
 
     .slider{
         overflow: hidden;
         display: flex;
+        background: red;
+
+        &:hover{
+            
+            .slider-1{
+                animation-play-state: paused;
+                a{
+                    color: #ffffff69;
+                }
+            }
+        }
         
         .slider-1{
             flex-shrink: 0;
             background: $font-noir;
             min-width: 100%;
             display: flex;
-            animation: slide 30s infinite;
+            animation: slide 40s infinite linear;
+
+            a{
+                flex-shrink: 0;
+                padding: 25px;
+                text-decoration: none;
+                display: flex;
+                align-items: center;
+                color: $primary-white-color;
+    
+                i{
+                    margin-right: 15px;
+                    font-size: 35px;
+                }
+
+                &:hover{
+                    color: $primary-white-color;
+                }
+            }
+
         }
         
-        a{
-            flex-shrink: 0;
-            padding: 25px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            color: $primary-white-color;
-
-            i{
-                margin-right: 10px;
-                width: 35px;
-            }
-        }
     }
 }
 @keyframes slide {
-     to{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
         transform: translateX(-100%);
     }
 }

@@ -9,35 +9,48 @@ body {
 }
 
 section {
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 150px;
 }
 section .slider {
   overflow: hidden;
   display: flex;
+  background: red;
+}
+section .slider:hover .slider-1 {
+  animation-play-state: paused;
+}
+section .slider:hover .slider-1 a {
+  color: rgba(255, 255, 255, 0.4117647059);
 }
 section .slider .slider-1 {
   flex-shrink: 0;
   background: #111;
   min-width: 100%;
   display: flex;
-  animation: slide 30s infinite;
+  animation: slide 40s infinite linear;
 }
-section .slider a {
+section .slider .slider-1 a {
   flex-shrink: 0;
   padding: 25px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: #f1f1f1;
+  color: #e4e4e4;
 }
-section .slider a i {
-  margin-right: 10px;
-  width: 35px;
+section .slider .slider-1 a i {
+  margin-right: 15px;
+  font-size: 35px;
+}
+section .slider .slider-1 a:hover {
+  color: #e4e4e4;
 }
 
 @keyframes slide {
-  to {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
     transform: translateX(-100%);
   }
 }/*# sourceMappingURL=style.css.map */
